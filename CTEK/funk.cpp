@@ -65,10 +65,12 @@ void data_reductX4(stack *stk)
 
 void print_stack(stack *stk)
 {
-    printf("first_free_index = %d, len = %d, data_pointer = %p\n", stk->first_free_index, stk->len, stk->data);
+    printf("first_free_index = %d, " 
+           "len = %d, "
+           "data_pointer = %p ", 
+            stk->first_free_index, stk->len, stk->data);
     for (int i = 0; i < stk->first_free_index; i++)
     {
-        printf("%d ", stk->data[i]);
+        printf("data[%d] = %d\n", i, stk->data[i]);
     }
-    putchar('\n');
 }
